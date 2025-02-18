@@ -21,15 +21,17 @@ Se tiver um arquivo chamado `exemplo.txt` com o seguinte conteúdo:
 ```
 linha1
 linha2
+
 linha1
 linha3
+
 linha2
 ```
 
 Execute o script:
 
 ```bash
-python comment_lines.py exemplo.txt
+python3 comment_lines.py exemplo.txt
 ```
 
 O script irá gerar um novo arquivo chamado `exemplo_filtered.txt` com o seguinte conteúdo:
@@ -37,9 +39,9 @@ O script irá gerar um novo arquivo chamado `exemplo_filtered.txt` com o seguint
 ```
 linha1
 linha2
-//linha1
+#
 linha3
-//linha2
+#
 ```
 
 ### Entrada via stdin
@@ -47,10 +49,15 @@ linha3
 Também pode fornecer a entrada via stdin:
 
 ```bash
-cat exemplo.txt | python comment_lines.py
+cat exemplo.txt | python3 comment_lines.py
 ```
+
+### Opções
+
+- `-s`, `--spaces`: Considera espaços na comparação de linhas.
+- `-p`, `--comment`: Comenta linhas vazias com `#`.
 
 ## Estrutura do Código
 
-- `comment_duplicate_lines(input_lines)`: Função que comenta linhas duplicadas de uma lista de linhas.
+- `comment_duplicate_lines(input_lines, spaces=False, comment=False)`: Função que comenta linhas duplicadas de uma lista de linhas.
 - `main()`: Função principal que gerencia a leitura do arquivo de entrada, chama a função de comentário de duplicatas e escreve o resultado em um novo arquivo ou imprime no terminal.
