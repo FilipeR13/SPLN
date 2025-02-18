@@ -1,0 +1,11 @@
+[project]
+
+name='rm_dup_lines'
+version='0.1.0'
+authors = [{name="José Rodrigues", email="j@gmail.com"}]
+description = """ """
+dependencies = ["argparse"]
+
+
+[project.scripts]
+rl="comment_lines:main"
