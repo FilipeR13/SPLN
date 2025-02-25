@@ -1,0 +1,12 @@
+[project]
+
+name='ftk'
+version='0.1.0'
+authors = [{name="José Rodrigues", email="j@gmail.com"}]
+description = "Remove duplicate lines from a file"
+dependencies = ["jjcli"]
+license = { text = "MIT" }
+
+[project.scripts]
+ftk-occ = "ftk.base:main"
+ftk-freq = "ftk.freq:main"
