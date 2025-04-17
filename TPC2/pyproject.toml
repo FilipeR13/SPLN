@@ -1,6 +1,6 @@
 [project]
 
-name='rm_dup_lines'
+name='comment_lines'
 version='0.1.0'
 authors = [{name="José Rodrigues", email="j@gmail.com"}]
 description = """ """
